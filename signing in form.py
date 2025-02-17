@@ -8,6 +8,7 @@ form= Tk()
 form.geometry('600x420')
 # resolution of the created window
 def DONE():
+# function of the send button
     first_name=entry_1.get()
     last_name=entry_2.get()
     age=entry_3.get()
@@ -26,11 +27,13 @@ def DONE():
             ok=Label(form,image=img_yep)
             ok.image=img_yep
             ok.place(x=300,y=60)
+# condition of fulfillment or unfulfillment of the text boxes
             
 entry_1=Entry(form)
 entry_2=Entry(form)
 entry_3=Entry(form)
 entry_4=Entry(form)
+# creating the text boxes
 entry_1.place(x=160,y=60)
 entry_2.place(x=160,y=110)
 entry_3.place(x=160,y=160)
@@ -40,6 +43,7 @@ first_name_label=Label(form,text='First Name:',font=('Franklin Gothic',18,'bold 
 last_name_label=Label(form,text='Last Name:',font=('Franklin Gothic',18,'bold italic'))
 age_label=Label(form,text='Age:',font=('Franklin Gothic',18,'bold italic'))
 ID_code_label=Label(form,text='ID code:',font=('Franklin Gothic',18,'bold italic'))
+# titles of the text boxes as labels on the window
 
 
 first_name_label.place(x=20,y=50)
@@ -48,5 +52,6 @@ age_label.place(x=100,y=150)
 ID_code_label.place(x=60,y=200)
 
 send=Button(form,text='SEND',font=('Franklin Gothic',20,'bold'),command=DONE)
+# the send button
 send.place(x=150,y=260)
 form.mainloop()
